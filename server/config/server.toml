@@ -1,0 +1,50 @@
+# LostLove Server Configuration
+
+[server]
+# Address to bind to
+bind_address = "0.0.0.0"
+
+# Port to listen on
+port = 8443
+
+# Protocol to use: tcp, udp, or both
+protocol = "tcp"
+
+# Maximum number of concurrent connections
+max_connections = 1000
+
+# Number of worker threads (0 = auto-detect CPU cores)
+worker_threads = 0
+
+[network]
+# TUN interface name
+tun_name = "hfp0"
+
+# TUN interface IP address (CIDR notation)
+tun_address = "10.8.0.1/24"
+
+# Maximum Transmission Unit
+mtu = 1400
+
+# Enable IPv6 support
+enable_ipv6 = false
+
+[limits]
+# Rate limit per user in bytes/second (100 MB/s)
+rate_limit_per_user = 100000000
+
+# Maximum streams per connection
+max_streams_per_connection = 256
+
+# Connection timeout in seconds
+connection_timeout = 300
+
+[monitoring]
+# Enable Prometheus metrics
+enable_metrics = true
+
+# Metrics server port
+metrics_port = 9090
+
+# Log level: trace, debug, info, warn, error
+log_level = "info"
